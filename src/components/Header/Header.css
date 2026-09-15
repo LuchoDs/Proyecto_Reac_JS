@@ -1,0 +1,18 @@
+header {
+    position: sticky;
+    top: 0; /*que quede fijo arriba*/
+    z-index: 1000;
+    height: 8.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color:  #00A7AA;
+}
+
+.logo {
+    height: 12rem;
+    width: auto;
+    margin-top: 1rem;
+    cursor: pointer;
+}

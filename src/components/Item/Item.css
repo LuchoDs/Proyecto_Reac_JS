@@ -1,0 +1,40 @@
+.text-dark {
+    color: black;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color:#ffffff;
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 1.6rem; /* Mismo tamaño relativo que heredaba en Front */
+    padding: 1rem 0.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+.card p {
+   padding: 0 0 1rem;
+   font-size: 1.8rem;
+}
+
+.card p:first-of-type {
+    font-size: 1.6rem;
+}
+
+.card p:last-of-type {
+    font-weight: 600;      /* Precio */
+}
+
+.card img {
+    width: 50%;
+    object-fit:cover; /* Proporción original sin estirar */
+    overflow: hidden;
+    padding-top: 2.1rem;
+    padding-bottom: .7rem;
+}

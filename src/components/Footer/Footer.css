@@ -1,0 +1,40 @@
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;    /* Para centrar horizontalmente todo el contenido */
+    flex-direction: row-reverse;
+    background-color: #00A7AA; 
+}
+
+.footer-list {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    padding: .5rem;
+    gap: 4rem;
+}
+/* Quita el azul y subrayado por defecto de los enlaces */
+.footer-list a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.8rem;
+}
+
+.leyenda {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    text-shadow: 0.2rem 0.2rem 1rem rgb(255, 255, 255);
+}
+
+.iconitos {
+    margin:0.5rem;
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+}

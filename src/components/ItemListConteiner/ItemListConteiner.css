@@ -1,0 +1,23 @@
+.titulo-principal {
+    margin: .5rem 8rem;
+    text-align: left;
+    font-size: 6.5rem;
+}
+
+.titulo-productos {
+    margin: 1.1rem 8rem 0;
+    padding-left: .5rem;
+    font-size: 4.5rem;
+    /*background-color: #FDD07A;*/
+    /*padding: 1rem;*/
+}
+
+.text-dark {
+    color: black;
+}
+
+.text-ligth {
+    color:#00A7AA;
+}
+
+

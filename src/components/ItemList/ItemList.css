@@ -1,0 +1,13 @@
+.contenedor-tarjetas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permitir que las tarjetas bajen a la siguiente línea cuando se achica la pantalla*/
+    justify-content:center;
+    gap: 6rem;
+    width: auto;
+    margin-left: 4rem;
+    padding: 2rem 4rem;
+    margin-bottom: 15rem;
+    filter:  drop-shadow(0 0 1.5rem #000000a6) /*drop-shadow(0 0 1rem #fafcfcb8)*/;
+
+}

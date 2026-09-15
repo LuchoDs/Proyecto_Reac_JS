@@ -1,0 +1,14 @@
+.enlaces  {
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    font-weight: 400;
+    cursor: pointer    
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 3rem;
+}
