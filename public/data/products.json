@@ -5,7 +5,7 @@
     "img": "/images/jw_double.jpeg",
     "volume": "750 ml",
     "price": 53900,
-    "description": "Ahumado dulce con clavos especiados, con una apariencia dorado intenso con toques oscuros. En boca, el humo de la turba persiste entre ricos frutos secos, la ralladura de naranja aporta frescura y la vainilla cremosa agrega notas dulces, culminando en un final donde las especias ardientes de las barricas añejadas en roble aportan un final ahumado prolongado."
+    "description": "Un blend ahumado, de color dorado intenso con toques oscuros. En boca, el humo de la turba persiste entre los frutos secos y la ralladura de naranja. La vainilla cremosa agrega notas dulces, culminando en un final ahumado prolongado."
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "img": "/images/Dewars15.jpeg",
     "volume": "1000 ml",
     "price": 63900,
-    "description": "De color Ámbar brillante con reflejos dorados. Aromas delicados de miel, vainilla y caramelo, acompañados por notas de flores blancas, frutas maduras, cítricos y un elegante toque de almendras tostadas. En boca se siente suave, cremoso y perfectamente equilibrado. Se destacan sabores de toffee, miel, frutas de huerto, naranja confitada, vainilla y un sutil fondo de roble especiado con ligeras notas de avellanas."
+    "description": "De color Ámbar brillante con reflejos dorados. Aromas delicados de miel, vainilla y caramelo. En boca se destacan sabores de toffee, miel, vainilla y con ligeras notas de avellanas."
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "img": "/images/DV_CB_MB.jpeg",
     "volume": "750 ml",
     "price": 11900,
-    "description":" De color rojo rubí intenso con reflejos violáceos. Aroma concentrado con notas especiadas del Cabernet y frutos negros maduros como moras y ciruelas del Malbec, acompañados de vainilla, tabaco y licor por su paso por madera."
+    "description":" De color rojo rubí intenso con reflejos violáceos. Aroma concentrado de frutos negros maduros como moras y ciruelas del Malbec, acompañados de vainilla, tabaco y licor por su paso por madera."
   },
   {
     "id": 4,
@@ -29,6 +29,6 @@
     "img": "/images/Luigi_Bosca_Malbec.jpeg",
     "volume": "750 ml",
     "price": 13900,
-    "description": "De color Rojo violáceo brillante y profundo. Aromas intensos a frutos rojos (como cerezas y ciruelas), con tonos florales y especiados muy equilibrados."
+    "description": "De color rojo violáceo brillante y profundo. Aromas intensos a frutos rojos (como cerezas y ciruelas), con tonos florales y especiados muy equilibrados."
   }
 ]

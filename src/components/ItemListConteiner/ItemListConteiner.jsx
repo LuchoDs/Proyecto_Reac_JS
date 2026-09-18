@@ -15,10 +15,10 @@ export const ItemListConteiner = () => {
                 }
             return resp.json()
         })
-        .then ((data) => setProducts(data))
+        .then ((data) => setProducts(data)) //aca ver la category para filtrar
         .catch ((error) => setErrors (error.message))
         .finally (() => setLoading(false));        
-    },[]);
+    },[]); // array de dependencia con category para recargar el componente con la ruta
 
     if (loading) return <p>cargando..</p>
     if (errors) return <p>{errors}</p>

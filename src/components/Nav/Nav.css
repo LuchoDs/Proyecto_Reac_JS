@@ -3,7 +3,8 @@
     padding: 1rem;
     color: white;
     font-weight: 400;
-    cursor: pointer    
+    cursor: pointer;
+    text-decoration: none;   
 }
 
 .footer-nav{

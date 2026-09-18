@@ -1,12 +1,13 @@
 import "./Item.css"
 
-export const Item = ({name, img, volume, price, children}) => {
+export const Item = ({name, img, volume, price, description, children}) => {
     
     return (
         <article className="card text-dark">
             <img src= {img}/>
             <h3>{name}</h3>
             <p>{volume}</p>
+            <p className="desc">{description}</p>
             <p>Precio: $ {price.toLocaleString('es-AR')}.-</p>
 
             {/* Podemos usar children y reutilizar este componente */}

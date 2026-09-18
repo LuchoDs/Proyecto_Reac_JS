@@ -1,7 +1,8 @@
+import { Routes, Route } from "react-router-dom"
 import { Footer } from "./components/Footer/Footer"
-import { Header} from "./components/Header/Header"
-import {ItemListConteiner} from "./components/ItemListConteiner/ItemListConteiner"
-
+import { Header } from "./components/Header/Header"
+import { ItemListConteiner } from "./components/ItemListConteiner/ItemListConteiner"
+import { ItemDetailConteiner } from "./components/ItemDetailConteiner/ItemDetailConteiner"
 
 function App() {
   
@@ -9,9 +10,13 @@ function App() {
   return (
     <>
     <Header/>
-    <br></br>
-    <ItemListConteiner/>
-    <br></br>
+      <main>
+        <Routes>
+          <Route path="/" element = {<ItemListConteiner/>}/>
+          <Route path="/cart" element = {<h1>Que miras forro ..</h1>}/>
+          <Route path="/product/:id" element ={<ItemDetailConteiner/>}/>
+        </Routes>
+      </main>
     <Footer/>
     </>
   )
