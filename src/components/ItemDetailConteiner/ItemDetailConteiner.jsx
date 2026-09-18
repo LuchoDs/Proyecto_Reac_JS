@@ -51,10 +51,12 @@ export const ItemDetailConteiner = () => {
 
     return ( //lo que debe retonar si todo dió bien
 
-        <section>
-            <h3 className="text-center text-dark">Detalle del producto</h3>
+        <section className="products-container">
+            <div>
+                <h3 className="text-center text-dark">Detalle del producto</h3>
+            </div>
         
-            <div className="products-container">
+            <div>
                 <ItemDetail item = {itemDetail}/>
             </div>
 

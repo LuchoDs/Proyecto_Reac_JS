@@ -1,3 +1,8 @@
 html {
     font-size: 62.5%;
 }
+
+.id.link {
+    list-style: none;
+    text-decoration: none;
+}

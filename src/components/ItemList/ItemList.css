@@ -11,3 +11,7 @@
    /* filter:  drop-shadow(0 0 1.5rem #000000a6) drop-shadow(0 0 1rem #fafcfcb8)*/;
 
 }
+
+.id-link{
+    text-decoration: none;
+}

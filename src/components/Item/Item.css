@@ -45,9 +45,8 @@
     -webkit-line-clamp: 1;
            line-clamp: 1; 
     -webkit-box-orient: vertical;
-    line-height: 2;
+    line-height: 2.5;
     margin: 0 1.3rem;
-    
 }
 
 .card img {
