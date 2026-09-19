@@ -28,7 +28,6 @@
 .detail-wrapper .card:hover {
     transform: none;
     filter: none;
-    border:none;
 }
 
 /* Muestra la descripción completa cancelando el recorte */
