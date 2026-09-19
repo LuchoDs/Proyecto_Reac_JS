@@ -1,0 +1,27 @@
+.text-dark {
+    color: black;
+}
+
+.btn {
+    display: flex;
+    border-radius: .8rem;
+    cursor: pointer; 
+    justify-content: center;
+    align-items: center;
+    border: .2rem solid black;
+    transition: transform .3s ease;
+    margin-bottom: 1rem;
+    padding: .8rem 2rem;
+    font-size: 5rem;
+}
+
+.btn:hover {
+    background-color: rgb(89, 255, 18);
+    border-color:transparent;
+    transform: scale(1.05);
+}
+
+.bg-secondary {
+    background-color: antiquewhite; 
+}
+    

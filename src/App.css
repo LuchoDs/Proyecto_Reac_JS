@@ -6,3 +6,7 @@ html {
     list-style: none;
     text-decoration: none;
 }
+
+main {
+    flex: 1;
+}

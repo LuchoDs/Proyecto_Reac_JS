@@ -7,11 +7,8 @@ export const Footer = () => {
         <footer>
             <nav className="nav-footer">
                 <ul className="footer-list">
-                    {/*<li><a 
-                        href="https://wa.me/5491159490842?text=Hola, quisiera más información sobre el catálogo" 
-                        target="_blank" 
-                        rel="noopener noreferrer">
-                        <img className="iconitos" src="/images/whatsapp.png" alt="chat en whatsapp"/>Whatsapp</a></li>*/}
+                    <li><p className="leyenda">Visitanos en nuestras redes</p></li>  
+                    
                     <li><a 
                         href="https://www.facebook.com/sevina.comision" target="_blank" rel="noopener noreferrer">
                         <img className="iconitos" src="/images/facebook.png" alt="icono facebook"/>Facebook</a></li>   
@@ -26,7 +23,7 @@ export const Footer = () => {
 
                 </ul>
             </nav>
-
+                        
             <p className="leyenda">Sitio creado por Lucho Ds para SEVINA - CoPESe</p>
         </footer>
     );

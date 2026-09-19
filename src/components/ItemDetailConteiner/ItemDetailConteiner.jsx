@@ -23,7 +23,7 @@ export const ItemDetailConteiner = () => {
         })
         .then((data) => { 
             //aca es donde voy a hacer find para id
-            // data es un array de obejtos -- find = metodoDeArray que hace un for  
+            // data es un array de objetos -- find = metodoDeArray que hace un for  
             //si no encuentra nada, devuelve un undefined
             //product es mi variable iteradora 
             // comparo el id de product (es un numero) === con el id de URL es un string (el de useParams)

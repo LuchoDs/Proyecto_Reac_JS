@@ -3,7 +3,7 @@ footer {
     display: flex;
     justify-content:space-around;
     align-items: center;    /* Para centrar horizontalmente todo el contenido */
-    flex-direction: row-reverse;
+     /*flex-direction: row-reverse;*/
     background-color: #00A7AA; 
 }
 
@@ -12,7 +12,8 @@ footer {
     list-style: none;
     flex-direction: row;
     padding: .5rem;
-    gap: 4rem;
+    gap: 3rem;
+    align-items: center;
 }
 /* Quita el azul y subrayado por defecto de los enlaces */
 .footer-list a {

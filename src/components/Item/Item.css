@@ -16,10 +16,11 @@
 .card:hover {
     transform: scale(1.03); /* Aumenta el tamaño un 3% */
     filter: drop-shadow(0rem 0rem 1.8rem rgba(4, 224, 198, 0.584));
+    border: .2rem solid rgb(4, 224, 198);
 }
 
 .card h3 {
-    font-size: 1.6rem; /* Mismo tamaño relativo que heredaba en Front */
+    font-size: 1.8rem; /* Mismo tamaño relativo que heredaba en Front */
     padding: 1rem 0.5rem;
     text-align: center;
     font-weight: 600;
@@ -47,6 +48,7 @@
     -webkit-box-orient: vertical;
     line-height: 2.5;
     margin: 0 1.3rem;
+
 }
 
 .card img {

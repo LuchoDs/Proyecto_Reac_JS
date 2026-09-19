@@ -14,7 +14,7 @@
     "img": "/images/Dewars15.jpeg",
     "volume": "1000 ml",
     "price": 63900,
-    "category": "whisky",
+    "category":"WHISKy",
     "description": "De color Ámbar brillante con reflejos dorados. Aromas delicados de miel, vainilla y caramelo. En boca se destacan sabores de toffee, miel, vainilla y con ligeras notas de avellanas."
   },
   {
@@ -23,7 +23,7 @@
     "img": "/images/DV_CB_MB.jpeg",
     "volume": "750 ml",
     "price": 11900,
-    "category": "vino",
+    "category": "vInO",
     "description":" De color rojo rubí intenso con reflejos violáceos. Aroma concentrado de frutos negros maduros como moras y ciruelas del Malbec, acompañados de vainilla, tabaco y licor por su paso por madera."
   },
   {
@@ -32,7 +32,7 @@
     "img": "/images/Luigi_Bosca_Malbec.jpeg",
     "volume": "750 ml",
     "price": 13900,
-    "category": "vino",
+    "category": "viNO",
     "description": "De color rojo violáceo brillante y profundo. Aromas intensos a frutos rojos (como cerezas y ciruelas), con tonos florales y especiados muy equilibrados."
   }
 ]
