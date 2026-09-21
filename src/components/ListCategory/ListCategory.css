@@ -1,27 +1,25 @@
-.text-dark {
-    color: black;
-}
 
-.btn {
+.contenedor-categorias .btn {
     display: flex;
-    border-radius: .8rem;
     cursor: pointer; 
-    justify-content: center;
-    align-items: center;
-    border: .2rem solid black;
     transition: transform .3s ease;
-    margin-bottom: 1rem;
+    margin: 1rem;
     padding: .8rem 2rem;
-    font-size: 5rem;
+    font-size: 5.5rem;
 }
 
-.btn:hover {
+.contenedor-categorias .btn:hover {
     background-color: rgb(89, 255, 18);
-    border-color:transparent;
+    border-radius:10rem; 
     transform: scale(1.05);
 }
 
-.bg-secondary {
-    background-color: antiquewhite; 
+.contenedor-categorias .bg-secondary {
+    background-color:none; 
 }
-    
+
+.contenedor-categorias {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10rem;
+}

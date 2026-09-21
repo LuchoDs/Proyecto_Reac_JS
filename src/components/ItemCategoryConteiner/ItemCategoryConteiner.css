@@ -1,0 +1,15 @@
+.seccion-categorias .titulo-principal-categoria {
+    margin: .5rem 8rem;
+    text-align: center;
+    font-size: 6.5rem;
+
+}
+
+.seccion-categorias .text-dark-categoria {
+    color:black;
+}
+
+.seccion-categorias  {
+    display: flex;
+    flex-direction: column;
+}

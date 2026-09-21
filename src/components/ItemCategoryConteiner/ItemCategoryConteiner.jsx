@@ -33,14 +33,17 @@ export const ItemCategoryConteiner = () => {
      //filtrado para categoria de json === categoria de URL
     const filteredCategory = itemCategory.filter((item) => {
         if(!category) return true;
-        return item.category === category;
+        return item.category.toLowerCase() === category;
     });
+
+    const capitalizar = (texto) => texto.charAt(0).toUpperCase() + texto.slice(1);
 
 
 
     return (
-        <section>
-            <h1 className="titulo-principal text-dark">{category}</h1>
+        <section className="seccion-categorias">
+            
+            <h1 className="titulo-principal-categoria text-dark-categoria">{capitalizar(category)}</h1>
         
             <ItemCategory itemCategory = {filteredCategory}/>
         

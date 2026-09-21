@@ -12,11 +12,11 @@ export const ListCategory = ({categorias}) => {
     // .toUpperCase(): metodo que aplica mayuscula (en este caso sólo al primer caracter)
     //slice: me devuelve un array de valores extraido segun indice. slice(inicio, fin) - 1 = index [1], la y final es index[5] - la longitud de whisky es 6 (es un solo string, los index son cada letra)
     return (
-        <div className ="contenedor-tarjetas">
+        <div className ="contenedor-categorias">
             {categorias.map((cat) => (
                 
                 <Link to={`/category/${cat}`} className ="id-link" key={cat}>
-                    <button className="btn bg-primary text-dark">{capitalizar(cat)}</button>
+                    <li className="btn bg-primary text-dark">{capitalizar(cat)}</li>
                 </Link>
 
             ))}

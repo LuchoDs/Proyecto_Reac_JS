@@ -4,7 +4,8 @@ import { Header } from "./components/Header/Header"
 import { ItemListConteiner } from "./components/ItemListConteiner/ItemListConteiner"
 import { ItemDetailConteiner } from "./components/ItemDetailConteiner/ItemDetailConteiner"
 import { ListCategoryConteiner } from "./components/ListCategoryConteiner/ListCategoryConteiner"
-import "./App.css"
+import { ItemCategoryConteiner} from "./components/ItemCategoryConteiner/ItemCategoryConteiner"
+import "./App.css"  
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           <Route path="/cart" element = {<h1>Que miras forro ..</h1>}/>
           <Route path="/product/:id" element ={<ItemDetailConteiner/>}/>
           <Route path="/categorias" element={<ListCategoryConteiner/>}/>
-          <Route path="/category/:category" element={<p>Lucho</p>}/>
+          <Route path="/category/:category" element={<ItemCategoryConteiner/>}/>
         </Routes>
       </main>
     <Footer/>
