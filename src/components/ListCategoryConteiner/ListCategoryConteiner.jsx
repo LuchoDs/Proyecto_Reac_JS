@@ -30,8 +30,10 @@ export const ListCategoryConteiner = () => {
 
     return (
 
-        <section>
+        <section className="seccion-categorias">
+            
             <h2 className="titulo-principal text-dark">CATEGORIAS DISPONIBLES</h2>
+            
             <ListCategory categorias ={categoria}/>
         
         </section>

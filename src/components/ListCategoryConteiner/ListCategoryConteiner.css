@@ -1,0 +1,4 @@
+.seccion-categorias {
+     display: flex;
+     flex-direction: column;
+}

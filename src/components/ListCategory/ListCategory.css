@@ -1,25 +1,44 @@
-
-.contenedor-categorias .btn {
-    display: flex;
-    cursor: pointer; 
-    transition: transform .3s ease;
-    margin: 1rem;
-    padding: .8rem 2rem;
-    font-size: 5.5rem;
-}
-
-.contenedor-categorias .btn:hover {
-    background-color: rgb(89, 255, 18);
-    border-radius:10rem; 
-    transform: scale(1.05);
-}
-
-.contenedor-categorias .bg-secondary {
-    background-color:none; 
-}
-
+/* 1. Limpiar la lista y ordenar el contenedor */
 .contenedor-categorias {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;  /* Para que no se extienda al 100% de la pantalla */
     margin-left: 10rem;
+    padding: 0;
+    list-style: none;         /* Elimina las viñetas / puntos de la lista */
+}
+
+/* 2. Quitar el subrayado azul predeterminado de los Links de React Router */
+.contenedor-categorias .id-link {
+    text-decoration: none;
+}
+
+/* 3. Estilar cada opción como una tarjeta o botón redondeado */
+.contenedor-categorias .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 3rem;             /* Tamaño de fuente equilibrado */
+    font-weight: 600;
+    color: #222;                    /* Color de texto */
+    
+    background-color: antiquewhite;    
+    border: .2rem solid #333;       
+    border-radius: 1.5rem;          /* Bordes redondeados */
+    
+    margin: 1rem 0;
+    padding: 1rem 3rem;             /* Relleno interno */
+    min-width: 17rem;               /* Ancho mínimo constante para que queden parejos */
+    
+    cursor: pointer; 
+    transition: all .3s ease;
+}
+
+/* 4. Efecto de Hover elegante */
+.contenedor-categorias .btn:hover {
+    background-color: rgb(89, 255, 18);
+    border-color: transparent;
+    transform: translateX(1.5rem) scale(1.02); /* Se desplaza suavemente hacia la derecha */
+    box-shadow: 0 .5rem 1.5 rgba(0, 0, 0, 0.15);
 }
