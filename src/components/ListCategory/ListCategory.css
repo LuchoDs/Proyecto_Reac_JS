@@ -40,5 +40,5 @@
     background-color: rgb(89, 255, 18);
     border-color: transparent;
     transform: translateX(1.5rem) scale(1.02); /* Se desplaza suavemente hacia la derecha */
-    box-shadow: 0 .5rem 1.5 rgba(0, 0, 0, 0.15);
+    box-shadow: 0.6rem .6rem rgba(84, 16, 209, 0.251);
 }

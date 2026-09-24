@@ -36,7 +36,7 @@ export const ItemDetailConteiner = () => {
         })
         .catch((error) => setError(error.message))
         .finally(()=>setLoading(false));
-    },[]);
+    },[id]);
     //si tengo productos relacionados, escribo "id" en el array de dependencias
     //lo uso para disparar de nuevo el useEffect al hacer click en otro producto 
     //dantes del fetch debo setear los setDEESTADOS al valor inicial 

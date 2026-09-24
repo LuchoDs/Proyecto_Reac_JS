@@ -2,6 +2,7 @@
     margin: .5rem 8rem;
     text-align: left;
     font-size: 6.5rem;
+   
 }
 
 .titulo-productos {
@@ -20,4 +21,13 @@
     color:#00A7AA;
 }
 
+.titulo-vino, .titulo-whisky{
+    font-style: italic;
+    font-family: arial cursive;
+}
 
+
+.titulo-vino, .titulo-whisky,.titulo-categoria{
+    margin-top:2rem;
+    font-size: 4.5rem;
+}

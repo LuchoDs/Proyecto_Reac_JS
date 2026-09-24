@@ -14,6 +14,7 @@ export const ItemList = ({products}) => {
         {products.map((product) => (
             <Link to={`/product/${product.id}`} className="id-link" key = {product.id}>
                 <Item {...product}/>
+
             </Link>
             //uso Link afuera para evitar conflictos con eventos de boton  
         ))}

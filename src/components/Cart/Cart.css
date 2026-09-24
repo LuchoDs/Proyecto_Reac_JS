@@ -1,0 +1,14 @@
+.cart-container {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos uno debajo del otro */
+  align-items: center;    /* Centra horizontalmente el texto y la imagen */
+  justify-content: center; /* Centra verticalmente */
+  text-align: center;     /* Asegura el centrado del texto */
+  min-height: 60vh;       /* Le da altura al contenedor para apreciar el centrado vertical */
+}
+
+.img-simpson {
+  max-width: 400px;       /* Tamaño adecuado para que no ocupe todo el ancho */
+  width: 100%;
+  height: auto;
+}
