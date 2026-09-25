@@ -14,7 +14,7 @@
     "img": "/images/Dewars15.jpeg",
     "volume": "1000 ml",
     "price": 63900,
-    "category":"WHISKy",
+    "category": "WHISKy",
     "description": "De color Ámbar brillante con reflejos dorados. Aromas delicados de miel, vainilla y caramelo. En boca se destacan sabores de toffee, miel, vainilla y con ligeras notas de avellanas."
   },
   {
@@ -24,7 +24,7 @@
     "volume": "750 ml",
     "price": 11900,
     "category": "vInO",
-    "description":" De color rojo rubí intenso con reflejos violáceos. Aroma concentrado de frutos negros maduros como moras y ciruelas del Malbec, acompañados de vainilla, tabaco y licor por su paso por madera."
+    "description": " De color rojo rubí intenso con reflejos violáceos. Aroma concentrado de frutos negros maduros como moras y ciruelas del Malbec, acompañados de vainilla, tabaco y licor por su paso por madera."
   },
   {
     "id": 4,
@@ -34,5 +34,95 @@
     "price": 13900,
     "category": "viNO",
     "description": "De color rojo violáceo brillante y profundo. Aromas intensos a frutos rojos (como cerezas y ciruelas), con tonos florales y especiados muy equilibrados."
+  },
+  {
+    "id": 5,
+    "name": "Molto puré de tomates",
+    "img": "/images/Molto pure de tomates.jfif",
+    "volume": "520 g",
+    "price": 950,
+    "category": "almacen",
+    "description": "Puré de tomate elaborado con tomates frescos, libre de gluten"
+  },
+  {
+    "id": 6,
+    "name": "Mostachol Matarazzo",
+    "img": "/images/Mostachol Matarazzo.jfif",
+    "volume": "500 g",
+    "price": 1400,
+    "category": "fideos",
+    "description": "Fideos mostachol N°52 de 100% trigo candeal seleccionado"
+  },
+  {
+    "id": 7,
+    "name": "Noel puré de tomate",
+    "img": "/images/Noel pure de tomate.jfif",
+    "volume": "530 g",
+    "price": 920,
+    "category": "almacen",
+    "description": "Puré de tomate libre de gluten Sin TACC, muy bajo en sodio"
+  },
+  {
+    "id": 8,
+    "name": "Sal fina Celusal",
+    "img": "/images/Sal fina Celusal.jfif",
+    "volume": "500 g",
+    "price": 850,
+    "category": "almacen",
+    "description": "Sal fina corrediza para mesa y cocina"
+  },
+  {
+    "id": 9,
+    "name": "Sal fina Dos Anclas",
+    "img": "/images/Sal fina dos anclas.jfif",
+    "volume": "500 g",
+    "price": 880,
+    "category": "almacen",
+    "description": "Sal fina libre de gluten Sin TACC"
+  },
+  {
+    "id": 10,
+    "name": "Fideos Loquenia",
+    "img": "/images/Tallarines Loquenia.jfif",
+    "volume": "500 g",
+    "price": 1100,
+    "category": "fideos",
+    "description": "Fideos secos de harina de trigo, cocción en 6 a 8 minutos"
+  },
+  {
+    "id": 11,
+    "name": "Sal fina Dos Estrellas",
+    "img": "/images/Sal fina Dos Estrellas.jfif",
+    "volume": "500 g",
+    "price": 820,
+    "category": "almacen",
+    "description": "Sal fina lavada y purificada para mesa y cocina"
+  },
+  {
+    "id": 12,
+    "name": "Sal gruesa Dos Anclas",
+    "img": "/images/Sal gruesa Dos Anclas.jfif",
+    "volume": "1 kg",
+    "price": 1300,
+    "category": "almacen",
+    "description": "Sal gruesa libre de gluten Sin TACC"
+  },
+  {
+    "id": 13,
+    "name": "Sal Light Celusal",
+    "img": "/images/Sal ligth Celusal.jfif",
+    "volume": "470 g",
+    "price": 1600,
+    "category": "almacen",
+    "description": "Sal modificada reducida en sodio (66% menos de sodio)"
+  },
+  {
+    "id": 14,
+    "name": "Yerba Federación",
+    "img": "/images/Yerba_Federacion.png",
+    "volume": "1 kg",
+    "price": 3900,
+    "category": "Yerba",
+    "description": "Yerba entrerriana sabor ahumado"
   }
 ]

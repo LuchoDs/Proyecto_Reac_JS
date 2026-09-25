@@ -29,12 +29,7 @@ export const ItemListConteiner = () => {
             }
                   
             return setProducts(data);
-        
-        })
-            
-            
-            
-            //setProducts(data)) aca ver la category para filtrar
+        })//setProducts(data)) aca ver la category para filtrar
         .catch ((error) => setErrors (error.message))
         .finally (() => setLoading(false));        
     },[category]); // array de dependencia con category para recargar el componente con la ruta
@@ -42,21 +37,23 @@ export const ItemListConteiner = () => {
 
     // Lógica para definir el título según la categoría
     let titulo = "BIENVENIDOS A NUESTRA TIENDA";
+    let subtitulo ="PRODUCTOS";
     let claseTitulo = "";
 
     if (category) {
+        subtitulo= "Productos de la categoria"
         const lowCategory = category.toLowerCase();      
         if (lowCategory === "vino") {
                 titulo = `".. uva uva uva.. hacete ${category.toUpperCase()}"`;
                 claseTitulo = "titulo-vino";
                 console.log(claseTitulo);
             } else if (lowCategory === "whisky") {
-                titulo = `".. lo que duran dos peces de hielo en un ${category.toUpperCase()} on the rocks"`;
+                titulo = `".. lo que duran dos peces de hielo en un ${category.toUpperCase()} on the rocks .."`;
                 claseTitulo = "titulo-whisky";
                 console.log(claseTitulo);
             } else {
-            titulo = `Ud. está en categoría ${category.toUpperCase()}`;
-            claseTitulo = "titulo-categoria";
+                titulo = `Ud. está en categoría ${category.toUpperCase()}`;
+              claseTitulo = "titulo-categoria";
             console.log(claseTitulo);
         }
     }
@@ -69,7 +66,7 @@ export const ItemListConteiner = () => {
 
         <h1 className={`titulo-principal text-dark ${claseTitulo}`}>{titulo}</h1>
         
-        <h2 className = "titulo-productos text-ligth">PRODUCTOS</h2>
+        <h2 className = "titulo-productos text-ligth">{subtitulo}</h2>
         
         <ItemList products = {products}/>
         
