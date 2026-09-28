@@ -23,11 +23,13 @@
      /* Ancho más amplio que la grilla */
     transition: none;
     border: .2rem solid #00a7aab7;
+    height: auto;
 }
 
 .detail-wrapper .card:hover {
     transform: none;
     filter: none;
+
 }
 
 /* Muestra la descripción completa cancelando el recorte */
@@ -37,6 +39,7 @@
             line-height: 1.3;
         padding: 0.5rem;
         margin: 0;
+    
 }
 
 .detail-wrapper .btn {
