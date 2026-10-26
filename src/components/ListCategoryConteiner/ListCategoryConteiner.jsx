@@ -1,26 +1,16 @@
 import { useState, useEffect } from "react";
 import "./ListCategoryConteiner.css"
 import { ListCategory } from "../ListCategory/ListCategory"
+import {  getCategories } from "../../services/productsService";
 
 export const ListCategoryConteiner = () => {
     const[categoria, setCategoria] = useState ([])
     const[errors, setErrors] = useState(null)
     const[loading, setLoading]=useState(true)
 
-    useEffect (() => {
-        fetch("/data/products.json")
-        .then((resp) => {
-            if(!resp.ok) {
-                throw new Error ("No hay productos para mostrar")
-            }
-            return resp.json()
-        })
-        
-        .then((data) => {
-            const catUnicas = [...new Set (data.map((item)=> (item.category || "categoria-no-definida").toLowerCase()))]
-            setCategoria(catUnicas);
-        })  
-
+    useEffect (() => { 
+        getCategories()
+        .then((data) => setCategoria(data))
         .catch ((error) => setErrors (error.message))
         .finally(() => setLoading(false));
     },[]);

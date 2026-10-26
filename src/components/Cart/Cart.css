@@ -1,14 +1,49 @@
-.cart-container {
-  display: flex;
-  flex-direction: column; /* Alinea los elementos uno debajo del otro */
-  align-items: center;    /* Centra horizontalmente el texto y la imagen */
-  justify-content: center; /* Centra verticalmente */
-  text-align: center;     /* Asegura el centrado del texto */
-  min-height: 60vh;       /* Le da altura al contenedor para apreciar el centrado vertical */
+
+
+.cart-wrapper .btn {
+    display: flex;
+    border-radius: .8rem;
+    cursor: pointer; 
+    justify-content: center;
+    align-items: center;
+    border: .2rem solid black;
+    transition: transform .3s ease;
+    margin-bottom: 1rem;
+    padding: .8rem 2rem;
 }
 
-.img-simpson {
-  max-width: 400px;       /* Tamaño adecuado para que no ocupe todo el ancho */
-  width: 100%;
-  height: auto;
+.cart-wrapper .btn:hover {
+    background-color: rgb(89, 255, 18);
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+.cart-wrapper .bg-secondary {
+    background-color: antiquewhite;
+    font-size: 1.8rem;
+    
+}
+
+.btn-wrapper .btn {
+    display: flex;
+    border-radius: .8rem;
+    cursor: pointer; 
+    justify-content: center;
+    align-items: center;
+    border: .2rem solid black;
+    transition: transform .3s ease;
+    margin-bottom: 1rem;
+    padding: .8rem 2rem;
+}
+
+.btn-wrapper .btn:hover {
+    background-color: rgb(89, 255, 18);
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+.btn-wrapper .bg-secondary {
+    background-color: antiquewhite;
+    font-size: 1.8rem;
+    
 }

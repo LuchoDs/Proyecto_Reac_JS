@@ -1,3 +1,4 @@
+import { RiFileWordLine } from "react-icons/ri"
 import "./Item.css"
 
 export const Item = ({name, img, volume, price, description, children}) => {

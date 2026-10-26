@@ -2,35 +2,26 @@ import { useState, useEffect } from "react";
 import "./ItemListConteiner.css"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom";
-
+import { getProducts } from "../../services/productsService"
+import { filteredProducts } from "../../services/productsService";
 
 export const ItemListConteiner = () => {
     const { category } = useParams()
-    const [products, setProducts] = useState([]);
-    const [errors, setErrors] = useState(null);
+    const [products, setProducts] = useState([]); //va a guardar lo que viene del json - inicia vacio, se actuializa con setProducts al final del fetch
+    const [errors, setErrors] = useState(null); //va a guardar los errores que puedan surgir en el fetch (lo atrapa en el catch) inicia en null, se actualiza con setErrors al final del fetch
     const [loading, setLoading] = useState(true);
 
-    useEffect (() => {
+    useEffect (() => { // sintaxis básica: una función y un array -> useEffect(() => { ... }, []); 
         setErrors(null); // seteo los estados al original
         setLoading(true);
-
-        fetch ("/data/products.json")
-        .then ((resp) => {
-            if (!resp.ok) {
-                throw new Error ("error al cargar los productos");
-                }
-            return resp.json()
-        })
-        .then ((data) => {
-            if (category) {
-                    const filteredProducts = data.filter((item) => item.category.toLowerCase() === category);
-                    setProducts(filteredProducts);
-                    return;
-            }
-                  
-            return setProducts(data);
-        })//setProducts(data)) aca ver la category para filtrar
-        .catch ((error) => setErrors (error.message))
+        
+        const start = category ? filteredProducts(category): getProducts()
+        //fetch ("/data/products.json") no se menciona a Public - ruta absoluta a data/products.json (sintaxis fetch - then - then - catch - finally)
+        //LO REEMPLAZO POR MI FUNCION DE CONSULTA A LA BASE DE DATOS
+        // getProducts()
+        start
+        .then ((data) => setProducts(data))
+        .catch ((error) => setErrors (error.message)) //error es un parametro
         .finally (() => setLoading(false));        
     },[category]); // array de dependencia con category para recargar el componente con la ruta
 
@@ -54,7 +45,7 @@ export const ItemListConteiner = () => {
             } else {
                 titulo = `Ud. está en categoría ${category.toUpperCase()}`;
               claseTitulo = "titulo-categoria";
-            console.log(claseTitulo);
+                
         }
     }
 

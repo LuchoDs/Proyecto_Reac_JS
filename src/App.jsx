@@ -4,8 +4,8 @@ import { Header } from "./components/Header/Header"
 import { ItemListConteiner } from "./components/ItemListConteiner/ItemListConteiner"
 import { ItemDetailConteiner } from "./components/ItemDetailConteiner/ItemDetailConteiner"
 import { ListCategoryConteiner } from "./components/ListCategoryConteiner/ListCategoryConteiner"
-import { Cart } from "./components/Cart/Cart"
 import "./App.css"  
+import { CartView } from "./components/Cart/CartView"
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element = {<ItemListConteiner/>}/>
-          <Route path="/cart" element = {<Cart/>}/>
+          <Route path="/cart" element = {<CartView/>}/>
           <Route path="/product/:id" element ={<ItemDetailConteiner/>}/>
           <Route path="/categorias" element={<ListCategoryConteiner/>}/>
           <Route path="/category/:category" element={<ItemListConteiner/>}/>

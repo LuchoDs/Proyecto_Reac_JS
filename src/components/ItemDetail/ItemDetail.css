@@ -77,3 +77,35 @@
     margin: 0;
     padding: 0;
 }
+
+.selector-container {
+    margin: 2rem;
+    
+}
+
+.quantity-select {
+    font-size: 1.7rem;
+    text-align: center;
+    width: auto;
+}
+
+.quantity-input {
+    font-size: 3rem;
+    text-align: center;
+    padding: .5rem 1.2rem;
+   
+}
+
+.card p.no-stock {
+    color: red;
+    font-size: 2.5rem;
+}
+
+/* Estilo exclusivo para cuando el botón está deshabilitado */
+.btn:disabled {
+    background-color: #e0e0e0 !important; /* Un gris suave de fondo */
+    color: #888888 !important;             /* Texto gris opaco */
+    border-color: #cccccc !important;     /* Borde atenuado */
+    cursor: not-allowed;                  /* Cursor de prohibido al pasar el mouse */
+    opacity: 0.7;                         /* Le baja un poco la intensidad */
+}

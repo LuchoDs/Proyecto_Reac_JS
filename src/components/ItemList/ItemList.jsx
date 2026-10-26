@@ -11,20 +11,18 @@ export const ItemList = ({products}) => {
 
     return (
       <div className="contenedor-tarjetas"> 
-        {products.map((product) => (
-            <Link to={`/product/${product.id}`} className="id-link" key = {product.id}>
+        {products.map((product) => ( //para escribir codigo JS en el return, necesito usar "{ }"
+            <Link to={`/product/${product.id}`} className="id-link" key = {product.id}> 
                 <Item {...product}/>
-
-            </Link>
-            //uso Link afuera para evitar conflictos con eventos de boton  
+            </Link>//uso Link afuera para evitar conflictos con eventos de boton  
         ))}
         </div>
     );
 };
 
-{/*return (
-    <div className="contenedor-tarjetas"> 
-        {products.map((product) => (
-         <Item key = {product.id}{...product}/> //Acá debo meter el link para evitar conflictos con eventos de boton si uso children para un boton o etc 
-        ))}
-    </div>*/}
+// return (
+//     <div className="contenedor-tarjetas"> 
+//         {products.map((product) => (
+//          <Item key = {product.id}{...product}/> //Acá debo meter el link para evitar conflictos con eventos de boton si uso children para un boton o etc 
+//         ))}
+//     </div>

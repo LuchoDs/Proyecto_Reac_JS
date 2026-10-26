@@ -1,14 +1,15 @@
-import { StrictMode } from 'react'
+
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import { CartProvider } from "./context/CartContext.jsx"
 import './index.css'
 import App from './App.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-  
-    <App />
- 
+    <CartProvider>
+      <App />
+    </CartProvider>
   </BrowserRouter>, //lo que esta entre medio, queda como childre -App (los strict se van)
-)
+);

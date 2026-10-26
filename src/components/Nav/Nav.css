@@ -1,15 +1,45 @@
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    list-style: none;
+     
+}
+
 .enlaces  {
     font-size: 2rem;
     padding: 1rem;
     color: white;
     font-weight: 400;
     cursor: pointer;
-    text-decoration: none;   
+    text-decoration: none;
+    position: relative;
+    margin-right: 2rem;
 }
 
-.footer-nav{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 3rem;
+.cart {
+    height: 3.5rem;
+    width: 4.5rem;
+    filter: brightness(0) invert(1);
+    
 }
+
+
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(244, 8, 8);
+    font-size: 1.8rem;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 50%;
+    width: 2.75rem;
+    height: 2.75rem;
+    position: absolute;
+    right: -2rem;
+    top: -.7rem;;
+
+}
+
+
