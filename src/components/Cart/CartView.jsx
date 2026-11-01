@@ -10,24 +10,33 @@ export const CartView = () => {
    
     return (
     <section className="cart-container">
-        <h1 className ="titulo-principal text-dark">Tu carrito de compras</h1>
+        <h3 className ="titulo-principal text-dark">Tu carrito de compras</h3>
 
         {cart.length ? (
             <>  {/* // Fragments <></> me permite renderizar mas de una cosa */}
-                <div>
+            <section className="section-cart">
+                
+                <aside className="cart-list">
                     <CartList/>
+                </aside>
+                    
+                
+                <aside className="cart-wrapper">
+                    
                     <CartSummary/>
-                </div>
-                <div className="cart-wrapper">
+
                     <button className="btn bg-secondary text-dark" onClick={clearCart}>Vaciar Carrito</button>
-                </div>
+                </aside>
+                </section>
             </>
             ) : (
             <>
-            <p className="empty-cart">Tu carrito está vacío 😶</p>
-            <Link className="btn bg-secondary text-dark" to={"/"}>
-                Volver
-            </Link>
+            <div className="empty-cart-wrapper">
+                <p className="empty-cart">Tu carrito está vacío 😶</p>
+                <Link className="btn bg-secondary text-dark btn-link" to={"/"}>
+                    Volver
+                </Link>
+            </div>
             </>
         )}
     </section>

@@ -19,9 +19,10 @@ export const useCart = () => {
 export const CartProvider = ({ children }) => {
     const navigate = useNavigate(); //para poder redirigir a otra pagina una vez que se haga la compra
     const [cart, setCart] = useState(()=> {
-        const storedCart = localStorage.getItem("cart");
+    const storedCart = localStorage.getItem("cart");
         return storedCart ? JSON.parse(storedCart) : [];
     });
+    
 
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
@@ -33,15 +34,35 @@ export const CartProvider = ({ children }) => {
         return inCart; //ver aca si esta funcion puede llamar a useState y agregar un elemento mas al contador
     }
 
-    //FUNCION PARA AGREGAR UN PRODUCTO AL CARRITO - VER DE ADAPTAR PARA CANTIDAD -
+    //FUNCION PARA AGREGAR UN PRODUCTO AL CARRITO
     const addItem = (item) => {
         if (isInCart(item)){
             alert ("El producto ya se encuentra en el carrito. Podrá modificar la cantidad deseada en la pestaña 'Carrito' antes de finalizar el pedido.");
             return;
         }
-        setCart([...cart, item]);
-        alert("Producto agregado al carrito. Podrá elegir la cantidad deseada  desde la pestaña 'Carrito' antes de finalizar el pedido.");
+        setCart([...cart, {...item, quantity: 1}]);
+        alert("Producto agregado al carrito. Podrá elegir la cantidad deseada desde la pestaña 'Carrito' antes de finalizar el pedido.");
         navigate(-1); //redirección a pagina anterior.
+    };
+
+    const decrease = (id) => {
+        const updatedQuantity = cart.map((element) => {
+             if (element.id == id) {
+                return {...element, quantity: element.quantity -1};
+             }
+             return element;
+        });        
+        setCart(updatedQuantity);
+    };
+
+    const increase = (id) => {
+        const updatedQuantity = cart.map((element) => {
+             if (element.id == id) {
+                return {...element, quantity: element.quantity +1};
+             }
+             return element;
+        });        
+        setCart(updatedQuantity);
     };
 
     // FUNCION REMOVER UN PRODUCTO DEL CARRITO - USAR FILTER-
@@ -59,11 +80,11 @@ export const CartProvider = ({ children }) => {
     //FUNCION PARA OBTENER EL TOTAL DE ITEMS EN EL CARRITO
     //si trabajo con cantidad, usar metodo reduce.
     const getTotalItems = () => {
-        return cart.length;
+        return cart.reduce((acc, element) => acc + element.quantity,0);
     };
 // aca debo modificar para trabajar con quantity
     const getCartTotal = () => {
-        return cart.reduce((acc, element) => acc + element.price,0);
+        return cart.reduce((acc, element) => acc + element.quantity*element.price,0);
     }
 
     const checkout = () => {
@@ -75,6 +96,8 @@ export const CartProvider = ({ children }) => {
     const values = {
         cart,
         addItem,
+        decrease,
+        increase,
         removeItem,
         clearCart,
         getTotalItems,

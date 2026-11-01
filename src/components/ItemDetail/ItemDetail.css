@@ -83,7 +83,7 @@
     
 }
 
-.quantity-select {
+/* .quantity-select {
     font-size: 1.7rem;
     text-align: center;
     width: auto;
@@ -94,18 +94,34 @@
     text-align: center;
     padding: .5rem 1.2rem;
    
-}
-
+} */
+/* 
 .card p.no-stock {
     color: red;
     font-size: 2.5rem;
 }
 
-/* Estilo exclusivo para cuando el botón está deshabilitado */
+Estilo exclusivo para cuando el botón está deshabilitado 
 .btn:disabled {
-    background-color: #e0e0e0 !important; /* Un gris suave de fondo */
-    color: #888888 !important;             /* Texto gris opaco */
-    border-color: #cccccc !important;     /* Borde atenuado */
-    cursor: not-allowed;                  /* Cursor de prohibido al pasar el mouse */
-    opacity: 0.7;                         /* Le baja un poco la intensidad */
+    background-color: #e0e0e0 !important; /* Un gris suave de fondo 
+    color: #888888 !important;             /* Texto gris opaco 
+    border-color: #cccccc !important;     /* Borde atenuado 
+    cursor: not-allowed;                  /* Cursor de prohibido al pasar el mouse 
+    opacity: 0.7;                         /* Le baja un poco la intensidad 
 }
+
+.quantity-select, 
+.quantity-input {
+    font-size: 1.6rem;   /* Tamaño de número normal y legible 
+    padding: .4rem .8rem;    /* Relleno interno chico para que no sea un mamotreto 
+    width: 9rem;
+    height: 3rem;         /* Ancho acotado para que la caja sea discreta 
+    text-align: center;
+    text-align-last: center;
+    border-radius: .6rem;
+    border: .18rem solid #00a7aa;
+}
+
+.quantity-select option {
+    text-align: center;
+} 
