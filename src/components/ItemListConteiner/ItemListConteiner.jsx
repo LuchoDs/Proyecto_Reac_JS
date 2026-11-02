@@ -3,7 +3,7 @@ import "./ItemListConteiner.css"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom";
 import { getProducts } from "../../services/productsService"
-import { filteredProducts } from "../../services/productsService";
+import { getProductsByCategory } from "../../services/productsService";
 
 export const ItemListConteiner = () => {
     const { category } = useParams()
@@ -15,7 +15,7 @@ export const ItemListConteiner = () => {
         setErrors(null); // seteo los estados al original
         setLoading(true);
         
-        const start = category ? filteredProducts(category): getProducts()
+        const start = category ? getProductsByCategory(category): getProducts()
         //fetch ("/data/products.json") no se menciona a Public - ruta absoluta a data/products.json (sintaxis fetch - then - then - catch - finally)
         //LO REEMPLAZO POR MI FUNCION DE CONSULTA A LA BASE DE DATOS
         // getProducts()
@@ -32,7 +32,7 @@ export const ItemListConteiner = () => {
     let claseTitulo = "";
 
     if (category) {
-        subtitulo= "Productos de la categoria"
+        subtitulo= "Productos disponibles"
         const lowCategory = category.toLowerCase();      
         if (lowCategory === "vino") {
                 titulo = `".. uva uva uva.. hacete ${category.toUpperCase()}"`;
@@ -43,7 +43,7 @@ export const ItemListConteiner = () => {
                 claseTitulo = "titulo-whisky";
                 console.log(claseTitulo);
             } else {
-                titulo = `Ud. está en categoría ${category.toUpperCase()}`;
+                titulo = `Ud. está en la categoría: ${category.toUpperCase()}`;
               claseTitulo = "titulo-categoria";
                 
         }

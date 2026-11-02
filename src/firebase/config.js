@@ -21,7 +21,3 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 
 export { db, auth };
-
-// api key: "2424f952129bf139012bf71dc686f04b"
-
-//https://i.ibb.co/60gptjfQ/Arroz-Eliges.jpg

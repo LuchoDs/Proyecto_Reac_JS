@@ -1,5 +1,6 @@
-import { doc, query, where, getDoc, collection, getDocs } from "firebase/firestore";
+import { doc, query, where, getDoc, collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
+
 
 
 // para tomar referencia de una coleccion "collection": necesita la base de datos, y el nombre de la coleccion.
@@ -82,18 +83,36 @@ export const getCategories = async () => {
 /*          FILTRO DE PRODUCTOS POR CATEGORIA          */
 /*----------------------------------------------------*/ 
 
-export const filteredProducts = async (category)=> {
+export const getProductsByCategory = async (category)=> {
 
     try {
         
         const q = query(productsRef, where("category", "==", category));
         const querySnapshot = await getDocs(q);
         
-        const productFiletered= querySnapshot.docs.map((doc) =>  {
+        const fileteredProducts = querySnapshot.docs.map((doc) =>  {
             return { id: doc.id, ...doc.data()}});
-            return productFiletered;
+            return fileteredProducts;
 
-} catch(error) {
-    console.log("Error al filtrar productos por categoria: ", error);
-    throw error;
-}};
+        } catch(error) {
+            console.log("Error al filtrar productos por categoria: ", error);
+            throw error;
+    }
+};
+
+/* -------------------------------------------------------------------------- */
+/*                              ALTA DE PRODUCTO                              */
+/* -------------------------------------------------------------------------- */
+export const createProduct = async(productData) => {
+    
+    try{
+
+        const docRef = await addDoc (productsRef, productData);  //productsRef es la referencia de mi coleccion en la base de datos, productData es mi nuevo documento que se agregara a la coleccion
+            //addDoc es función de Firebase para agregar documentos a una colección
+        return docRef.id; //por si quiero usar el id en algun otro lado
+
+    }catch(error){
+        console.error("Error al crear el producto", error)
+        throw error;
+    }
+};
