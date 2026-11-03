@@ -7,6 +7,10 @@
   align-items: flex-start; /* <-- Evita que el aside se estire verticalmente hacia abajo */
 }
 
+.cart-summary-details {
+  margin-top: 1.5rem;
+}
+
 .cart-list {
   width: 75%;
   /* Sacamos display: flex y flex-wrap de acá para que no interfieran */
@@ -19,11 +23,11 @@
   justify-content: flex-start;
   gap: 1.5rem;
   width: 100%;
-  margin-left: -1rem;
+  margin-left: -0.4rem;
 }
 
 .cart-wrapper {
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-direction: column; /* Apila el texto del total y los botones en columna */
   gap: 2rem;
