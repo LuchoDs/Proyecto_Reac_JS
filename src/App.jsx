@@ -1,30 +1,36 @@
-import { Routes, Route } from "react-router-dom"
-import { Footer } from "./components/Footer/Footer"
-import { Header } from "./components/Header/Header"
-import { ItemListConteiner } from "./components/ItemListConteiner/ItemListConteiner"
-import { ItemDetailConteiner } from "./components/ItemDetailConteiner/ItemDetailConteiner"
-import { ListCategoryConteiner } from "./components/ListCategoryConteiner/ListCategoryConteiner"
-import "./App.css"  
-import { CartView } from "./components/Cart/CartView"
-
+import { Routes, Route } from "react-router-dom";
+import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { ItemListConteiner } from "./components/ItemListConteiner/ItemListConteiner";
+import { ItemDetailConteiner } from "./components/ItemDetailConteiner/ItemDetailConteiner";
+import { ListCategoryConteiner } from "./components/ListCategoryConteiner/ListCategoryConteiner";
+import "./App.css";
+import { CartView } from "./components/Cart/CartView";
+import { ProductFormConteiner } from "./components/adminComponents/ProductsForm/ProductFormConteiner";
+import { ProductSuccess } from "./components/adminComponents/ProductSuccess";
 
 function App() {
-  
-
   return (
     <>
-    <Header/>
+      <Header />
       <main>
         <Routes>
-          <Route path="/" element = {<ItemListConteiner/>}/>
-          <Route path="/cart" element = {<CartView/>}/>
-          <Route path="/product/:id" element ={<ItemDetailConteiner/>}/>
-          <Route path="/categorias" element={<ListCategoryConteiner/>}/>
-          <Route path="/category/:category" element={<ItemListConteiner/>}/>
+          <Route path="/" element={<ItemListConteiner />} />
+          <Route path="/cart" element={<CartView />} />
+          <Route path="/product/:id" element={<ItemDetailConteiner />} />
+          <Route path="/categorias" element={<ListCategoryConteiner />} />
+          <Route path="/category/:category" element={<ItemListConteiner />} />
+
+          {/* /* ------------------------------- RUTAS ADMIN ------------------------------  */}
+          <Route path="admin" element={<ProductFormConteiner />} />
+          <Route
+            path="/admin/products/success/:id"
+            element={<ProductSuccess />}
+          />
         </Routes>
       </main>
-    <Footer/>
+      <Footer />
     </>
-  )
+  );
 }
-export default App
+export default App;

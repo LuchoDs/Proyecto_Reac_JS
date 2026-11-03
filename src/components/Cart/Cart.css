@@ -1,129 +1,169 @@
 .section-cart {
-    display: flex;
-    width: 95%;
-    margin: 0 1rem;
-}
-
-.cart-wrapper {
-    width: 20%;
-    display: flex;
-    flex-direction: column;   /* Apila el texto del total y los botones en columna */
-    gap: 2rem;
-  
-}
-.details{
-    text-decoration: underline;
-
-}
-.total {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.cart-summary-details li {
-    list-style-position: inside;
-    margin-top:1rem;
-
-}
-
-.cart-summary-details {
-    display: flex;
-    flex-direction: column;
-    gap:1.5rem;
-}
-
-.cart-summary-details .details{
-    font-weight: 400;
-
-}
-.counter{
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Alinea verticalmente los botones y el número al centro */
-    gap: 1rem;          /* Espacio prolijo entre los elementos sin abusar de los márgenes */
-    margin: 1rem;
-}
-
-.quantity-box {
-    border: 0.1rem solid black;
-    padding: 0.4rem 0.8rem; /* Un padding más equilibrado */
-    font-size: 1.6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 4rem;     /* Asegura que si hay números de dos cifras no se deforme */
-    background-color: #fff;
-    border-radius: 0.4rem;
-}
-
-.modifiers {
-    font-size: 1.5rem;
-    display: flex;;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    justify-content: center;
-    transition: transform 0.3s ease;
-    align-items: center;
-    border: 0.2rem solid black;
-    padding: 0.5rem 1.1rem;
-    background-color: antiquewhite;
-}
-
-.modifiers:hover {
-    background-color: rgb(89, 255, 18);
-    border-color: transparent;
-    transform: scale(1.05);
-    }
-
-.less:disabled {
-    background-color: rgba(178, 175, 175, 0.727);
-    cursor:no-drop;
-
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start; /* <-- Evita que el aside se estire verticalmente hacia abajo */
 }
 
 .cart-list {
-    width: 80%;
-    display: flex;
-    justify-content: flex-start;  
-
- 
+  width: 75%;
+  /* Sacamos display: flex y flex-wrap de acá para que no interfieran */
 }
 
-.cart-wrapper .btn, .cart-list .btn {
-    display: flex;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    border: 0.2rem solid black;
-    transition: transform 0.3s ease;
-    margin-bottom: 1rem;
-    padding: 0.8rem 2rem;
+/* Y creás o le aplicás esto al contenedor que está adentro de CartList (donde haces el .map) */
+.contenedor-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  margin-left: -1rem;
 }
 
-.cart-wrapper .btn:hover, .cart-list .btn:hover {
-    background-color: rgb(89, 255, 18);
-    border-color: transparent;
-    transform: scale(1.05);
-    }
+.cart-wrapper {
+  width: 20%;
+  display: flex;
+  flex-direction: column; /* Apila el texto del total y los botones en columna */
+  gap: 2rem;
+}
+.details {
+  text-decoration: underline;
+}
+.total {
+  font-size: 2rem;
+  font-weight: 700;
+}
 
-.cart-wrapper .bg-secondary, .cart-list .bg-secondary   {
-    background-color: antiquewhite;
-    font-size: 1.8rem;
+.cart-summary-details li {
+  list-style-position: inside;
+  margin-top: 1rem;
+}
+
+.cart-summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart-summary-details .details {
+  font-weight: 400;
+}
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Alinea verticalmente los botones y el número al centro */
+  gap: 1rem; /* Espacio prolijo entre los elementos sin abusar de los márgenes */
+  margin: 1rem;
+}
+
+.quantity-box {
+  border: 0.1rem solid black;
+  padding: 0.4rem 0.8rem; /* Un padding más equilibrado */
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 4rem; /* Asegura que si hay números de dos cifras no se deforme */
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+
+.modifiers {
+  font-size: 1.5rem;
+  display: flex;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  align-items: center;
+  border: 0.2rem solid black;
+  padding: 0.5rem 1.1rem;
+  background-color: antiquewhite;
+}
+
+.modifiers:hover {
+  background-color: rgb(89, 255, 18);
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+.less:disabled {
+  background-color: rgba(178, 175, 175, 0.727);
+  cursor: no-drop;
+}
+
+.cart-list .btn {
+  display: flex;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  justify-content: center;
+  border: 0.2rem solid black;
+  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+  padding: 0.8rem 0.5rem;
+}
+
+.cart-wrapper .btn:hover,
+.cart-list .btn:hover {
+  background-color: rgb(89, 255, 18);
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+.cart-wrapper .bg-secondary,
+.cart-list .bg-secondary {
+  background-color: rgb(251, 125, 123);
+  font-size: 1.8rem;
 }
 
 .empty-cart-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 4rem;
 }
 
 .empty-cart,
 .btn-link {
-    font-size: 3rem;
+  font-size: 3rem;
+}
+
+.item-img-cart {
+  height: 5rem;
+  width: 3rem;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.cart-summary-details .summary-btn {
+  display: flex;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  justify-content: center;
+  border: 0.2rem solid black;
+  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+  padding: 0.8rem 0.5rem;
+  background-color: aquamarine;
+  width: 25rem;
+}
+
+.cart-wrapper .empty-btn {
+  background-color: rgb(255, 255, 255);
+  color: red;
+  display: flex;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  justify-content: center;
+  border: 0.2rem solid black;
+  margin-bottom: 1rem;
+  padding: 0.8rem 0.5rem;
+  width: 25rem;
 }
 
 /* .selector-container {
@@ -142,5 +182,3 @@
     font-size: 1.8rem; /* Tamaño equilibrado para la palabra Cantidad 
     font-weight: 500;
 } */
-
-

@@ -1,20 +1,16 @@
-import { RiFileWordLine } from "react-icons/ri"
-import "./Item.css"
+import "./Item.css";
 
-export const Item = ({name, img, volume, price, description, children}) => {
-    
-    return (
-        <article className="card text-dark">
-            <img src= {img}/>
-            <h3>{name}</h3>
-            <p>{volume}</p>
-            <p className="desc">{description}</p>
-            <p>Precio: $ {price.toLocaleString('es-AR')}.-</p>
+export const Item = ({ name, image, volume, price, description, children }) => {
+  return (
+    <article className="card text-dark">
+      <img src={image} alt={name} />
+      <h3>{name}</h3>
+      <p>{volume}</p>
+      <p className="desc">{description}</p>
+      <p>Precio: $ {price.toLocaleString("es-AR")}.-</p>
 
-            {/* Podemos usar children y reutilizar este componente */}
-            {children}
-        </article>
-
-    )
-
-}
+      {/* Podemos usar children y reutilizar este componente */}
+      {children}
+    </article>
+  );
+};
