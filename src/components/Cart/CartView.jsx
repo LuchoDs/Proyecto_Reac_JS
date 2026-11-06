@@ -13,7 +13,6 @@ export const CartView = () => {
 
       {cart.length ? (
         <>
-          {" "}
           {/* // Fragments <></> me permite renderizar mas de una cosa */}
           <section className="section-cart">
             <aside className="cart-list">

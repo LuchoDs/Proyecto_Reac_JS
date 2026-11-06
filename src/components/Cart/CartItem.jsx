@@ -27,12 +27,11 @@ export const CartItem = ({ item }) => {
             className="btn bg-secondary text-dark"
             onClick={() => removeItem(item.id)}
           >
-            {" "}
             {/* //como en la funcion defini que el parametro sea un string, es que hago item.id */}
             Eliminar
           </button>
         </div>
-      </Item>{" "}
+      </Item>
       {/* //se lo paso a Item con spread operator para que Item pinte la tarjeta */}
     </div>
   );

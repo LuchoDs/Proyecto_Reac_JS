@@ -1,34 +1,20 @@
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 8.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #00A7AA;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 8.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #00a7aa;
 }
-
-/* Flexbox aplicado al Link para alinear imagen y texto 
-.logo-text {
-    display: flex;
-    align-items: center;
-    gap:3rem;
-    text-decoration: none;
-}*/
 
 .logo {
-    height: 9.5rem; 
-    width: auto; 
-    cursor: pointer;
-    margin-top: .9em;
-    overflow:hidden;
-    
-}
-
-.sevina {
-    color: white;
-    font-size: 3.9rem;
-    font-weight: bold;
+  height: 9.5rem;
+  width: auto;
+  cursor: pointer;
+  margin-top: 1rem;
+  overflow: hidden;
+  margin-left: -3rem;
 }
