@@ -1,6 +1,4 @@
-import { Routes, Route } from "react-router-dom";
-import { Footer } from "./components/Footer/Footer";
-import { Header } from "./components/Header/Header";
+import { Navigate, Routes, Route } from "react-router-dom";
 import { ItemListConteiner } from "./components/ItemListConteiner/ItemListConteiner";
 import { ItemDetailConteiner } from "./components/ItemDetailConteiner/ItemDetailConteiner";
 import { ListCategoryConteiner } from "./components/ListCategoryConteiner/ListCategoryConteiner";
@@ -8,28 +6,45 @@ import "./App.css";
 import { CartView } from "./components/Cart/CartView";
 import { ProductFormConteiner } from "./components/adminComponents/ProductsForm/ProductFormConteiner";
 import { ProductSuccess } from "./components/adminComponents/ProductSuccess";
+import { PublicLayout } from "./layouts/PublicLayout";
+import { AdminLayout } from "./layouts/AdminLayout";
+import { Login } from "./components/Login/Login";
+import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
+import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
 
 function App() {
   return (
     <>
-      <Header />
-      <main>
-        <Routes>
+      <Routes>
+        {/*----------------------------- RUTAS PUBLICAS ------------------------------  */}
+        <Route element={<PublicLayout />}>
+          {/* este route se vuelve el lugar por donde van a correr las rutas a traves del OUTLET */}
           <Route path="/" element={<ItemListConteiner />} />
           <Route path="/cart" element={<CartView />} />
           <Route path="/product/:id" element={<ItemDetailConteiner />} />
           <Route path="/categorias" element={<ListCategoryConteiner />} />
           <Route path="/category/:category" element={<ItemListConteiner />} />
+        </Route>
+        {/* aca cierro lo que va a correr por PublicLayout */}
+        {/* Login por fuera de AdminLayout para acceder si no estamos logueados */}
+        <Route path="/admin/login" element={<Login />} />
+        {/*.espacios                                                             .*/}
 
-          {/* /* ------------------------------- RUTAS ADMIN ------------------------------  */}
-          <Route path="admin" element={<ProductFormConteiner />} />
-          <Route
-            path="/admin/products/success/:id"
-            element={<ProductSuccess />}
-          />
-        </Routes>
-      </main>
-      <Footer />
+        {/* ------------------------------- RUTAS ADMIN ------------------------------  */}
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Navigate to={"dashboard"} />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="products/new" element={<ProductFormConteiner />} />
+          <Route path="products/success/:id" element={<ProductSuccess />} />
+        </Route>
+      </Routes>
     </>
   );
 }

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const ProductFormUI = ({
   //aca va a estar el form, y recibirá las props. Las desestructuro.
   product,
@@ -86,6 +88,12 @@ export const ProductFormUI = ({
         {/* Para errores generales que no sean la validación del form */}
         {errors.general && <p className="error">{errors.general}</p>}
       </form>
+
+      <div>
+        <Link className="btn bg-secondary text-dark back" to="/admin">
+          VOLVER AL DASHBOARD
+        </Link>
+      </div>
     </section>
   );
 };
