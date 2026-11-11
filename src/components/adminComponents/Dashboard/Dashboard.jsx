@@ -18,33 +18,21 @@ export const Dashboard = () => {
             Modificar o Eliminar Productos
           </Link>
 
-          {/* <button
-          className="btn bg-secondary text-dark ventas"
-          onClick="<p>Hello</p>"
-        >
-          Ver registros de ventas
-        </button>
-
-        <button
-          className="btn bg-secondary text-dark meme"
-          onClick="<p>Hello</p>"
-        >
-          Para ver un meme
-        </button> */}
-
           <Link to="/" className="linkOption">
             Ir a la tienda
           </Link>
 
-          <button className="logout">
-            <img
-              className="imgout"
-              src="/images/puerta.png"
-              alt="salir"
-              onClick={logout}
-            />
+          <button className="logout" onClick={logout}>
+            <img className="imgout" src="/images/puerta.png" alt="salir" />
             Cerrar sesión
           </button>
+
+          {/* <button
+            className="btn bg-secondary text-dark meme"
+            onClick="<p>Hello</p>"
+          >
+            Para ver un meme
+          </button> */}
         </div>
 
         <div className="secondary">
