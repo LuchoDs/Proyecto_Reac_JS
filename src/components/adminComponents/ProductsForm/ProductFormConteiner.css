@@ -1,7 +1,15 @@
 .general-form {
   display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.back {
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+  justify-content: flex-start; /* Lo alinea prolijamente contra el margen izquierdo del form */
+  margin-bottom: 1.5rem;
 }
 
 .product-form {

@@ -12,6 +12,11 @@ export const ProductFormUI = ({
 }) => {
   return (
     <section className="general-form">
+      <div className="back">
+        <Link className="btn bg-secondary text-dark" to="/admin">
+          VOLVER AL DASHBOARD
+        </Link>
+      </div>
       <form className="product-form" onSubmit={onSubmit}>
         <h2>{inEdition ? "Editar producto" : "Agregar nuevo producto"}</h2>
 
@@ -98,12 +103,6 @@ export const ProductFormUI = ({
         {/* Para errores generales que no sean la validación del form */}
         {errors.general && <p className="error">{errors.general}</p>}
       </form>
-
-      <div>
-        <Link className="btn bg-secondary text-dark back" to="/admin">
-          VOLVER AL DASHBOARD
-        </Link>
-      </div>
     </section>
   );
 };

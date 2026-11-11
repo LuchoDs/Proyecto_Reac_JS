@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getProducts, deleteProduct } from "../../services/productsService";
 import "./ProductManagement.css";
 import { ProductManagementCards } from "./ProductManagementCards";
+import { Link } from "react-router-dom";
 
 export const ProductManagement = () => {
   const [products, setProducts] = useState([]);
@@ -40,6 +41,11 @@ export const ProductManagement = () => {
 
   return (
     <div className="management-wrapper">
+      <div>
+        <Link className="btn bg-secondary text-dark back" to="/admin">
+          VOLVER AL DASHBOARD
+        </Link>
+      </div>
       <h2 className="title">Productos disponibles</h2>
       <ProductManagementCards products={products} onDelete={HandleDelete} />
     </div>

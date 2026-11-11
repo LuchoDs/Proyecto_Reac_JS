@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { db } from "../../firebase/config";
 import { collection, getDocs } from "firebase/firestore";
 import { OrdersManagementCards } from "./OrdersManagementCards";
+import { Link } from "react-router-dom";
 
 export const OrdersManagement = () => {
   const [orders, setOrders] = useState([]);
@@ -36,9 +37,16 @@ export const OrdersManagement = () => {
   if (errors) return <p>Error al cargar productos: {errors}</p>;
 
   return (
-    <div className="management-wrapper">
-      <h2 className="title">Ordenes cargadas</h2>
-      <OrdersManagementCards orders={orders} />
-    </div>
+    <>
+      <div className="management-wrapper">
+        <div>
+          <Link className="btn bg-secondary text-dark back" to="/admin">
+            VOLVER AL DASHBOARD
+          </Link>
+        </div>
+        <h2 className="title">Ordenes cargadas</h2>
+        <OrdersManagementCards orders={orders} />
+      </div>
+    </>
   );
 };
