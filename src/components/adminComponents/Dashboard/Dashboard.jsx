@@ -18,6 +18,10 @@ export const Dashboard = () => {
             Modificar o Eliminar Productos
           </Link>
 
+          <Link to="/admin/dashboard/orders" className="linkOption">
+            Ver ordenes de compra
+          </Link>
+
           <Link to="/" className="linkOption">
             Ir a la tienda
           </Link>

@@ -1,21 +1,33 @@
+.contenedor-tarjetas-principal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
+  gap: 2rem; /* Espacio entre las tarjetas */
+  width: 90%;
+}
+
 h1 {
-  margin: 2rem 0;
-  text-align: center;
+  margin-top: 2rem;
+  margin-right: 4rem;
+  text-align: right;
 }
 
 .dash-conteiner {
-  margin: 3rem 0 3rem 2rem;
-  gap: 3rem;
+  margin: 3rem 2rem;
+  gap: 2rem;
   display: flex;
 }
 
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .options {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-left: 1rem;
   width: 15%;
   padding: 1rem;
+  margin-top: 10rem;
 }
 .linkOption {
   text-decoration: none;
@@ -44,6 +56,6 @@ h1 {
 }
 
 .secondary {
-  width: 85%;
+  flex: 1;
   padding: 1rem;
 }

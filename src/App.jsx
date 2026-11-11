@@ -12,6 +12,7 @@ import { Login } from "./components/Login/Login";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
 import { ProductManagement } from "./components/adminComponents/ProductManagement";
+import { OrdersManagement } from "./components/adminComponents/OrdersManagement";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />}>
             <Route index element={<h2>Bienvenido al Panel</h2>} />
             <Route path="products/manage" element={<ProductManagement />} />
+            <Route path="orders" element={<OrdersManagement />} />
             <Route path="products/new" element={<ProductFormConteiner />} />
             <Route
               path="products/edit/:id"
