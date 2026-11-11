@@ -70,6 +70,9 @@ export const Login = () => {
 
       <div className="store">
         <Link to="/">No loguearse y volver a la tienda</Link>
+        <p>(Credenciales</p>
+        <p>usuario: admin@admin.com</p>
+        <p>pass: admin123)</p>
       </div>
     </>
   );

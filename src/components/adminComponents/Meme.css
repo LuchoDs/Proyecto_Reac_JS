@@ -1,0 +1,16 @@
+.seccion-principal {
+  display: flex;
+  flex-direction: column;
+}
+
+.textob {
+  margin: 2rem 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 2.2rem;
+}
+
+.memes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}

@@ -13,6 +13,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
 import { ProductManagement } from "./components/adminComponents/ProductManagement";
 import { OrdersManagement } from "./components/adminComponents/OrdersManagement";
+import { Meme } from "./components/adminComponents/Meme";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
               element={<ProductFormConteiner />}
             />
             <Route path="products/success/:id" element={<ProductSuccess />} />
+            <Route path="meme" element={<Meme />} />
           </Route>
         </Route>
       </Routes>

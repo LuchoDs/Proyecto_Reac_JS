@@ -31,12 +31,17 @@ export const Dashboard = () => {
             Cerrar sesión
           </button>
 
-          {/* <button
+          <Link
+            to="/admin/dashboard/meme"
             className="btn bg-secondary text-dark meme"
-            onClick="<p>Hello</p>"
           >
+            <img
+              className="imgout"
+              src="/images/palanca-de-mando.png"
+              alt="meme"
+            />
             Para ver un meme
-          </button> */}
+          </Link>
         </div>
 
         <div className="secondary">
