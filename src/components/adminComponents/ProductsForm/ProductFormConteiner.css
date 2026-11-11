@@ -86,3 +86,9 @@
   color: #e53e3e;
   margin-top: 0.1rem;
 }
+
+.image-note {
+  color: red;
+  font-weight: 700;
+  text-align: center;
+}

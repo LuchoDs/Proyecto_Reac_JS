@@ -11,6 +11,7 @@ import { AdminLayout } from "./layouts/AdminLayout";
 import { Login } from "./components/Login/Login";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
+import { ProductManagement } from "./components/adminComponents/ProductManagement";
 
 function App() {
   return (
@@ -28,8 +29,10 @@ function App() {
         {/* aca cierro lo que va a correr por PublicLayout */}
         {/* Login por fuera de AdminLayout para acceder si no estamos logueados */}
         <Route path="/admin/login" element={<Login />} />
-        {/*.espacios                                                             .*/}
-
+        /* --------------------------------- ------
+        --------------------------------- */ /*
+        --------------------------------- ------
+        --------------------------------- */
         {/* ------------------------------- RUTAS ADMIN ------------------------------  */}
         <Route
           path="/admin"
@@ -39,10 +42,18 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route index element={<Navigate to={"dashboard"} />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="products/new" element={<ProductFormConteiner />} />
-          <Route path="products/success/:id" element={<ProductSuccess />} />
+          <Route index element={<Navigate to="dashboard" replace />} />
+
+          <Route path="dashboard" element={<Dashboard />}>
+            <Route index element={<h2>Bienvenido al Panel</h2>} />
+            <Route path="products/manage" element={<ProductManagement />} />
+            <Route path="products/new" element={<ProductFormConteiner />} />
+            <Route
+              path="products/edit/:id"
+              element={<ProductFormConteiner />}
+            />
+            <Route path="products/success/:id" element={<ProductSuccess />} />
+          </Route>
         </Route>
       </Routes>
     </>

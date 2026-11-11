@@ -17,7 +17,7 @@ export const ProductSuccess = () => {
         </Link>
         <Link
           className="btn bg-secondary text-dark another"
-          to="/admin/products/new"
+          to="/admin/dashboard/products/new"
         >
           Cargar otro producto
         </Link>

@@ -8,11 +8,12 @@ export const ProductFormUI = ({
   onChange,
   onFileChange,
   onSubmit,
+  inEdition,
 }) => {
   return (
     <section className="general-form">
       <form className="product-form" onSubmit={onSubmit}>
-        <h2>Agregar nuevo producto</h2>
+        <h2>{inEdition ? "Editar producto" : "Agregar nuevo producto"}</h2>
 
         <div>
           {/* //REACT va a tener el control de los cambios que se agreguen en value={product.name}, a traves del estado que vendra del conteiner. */}
@@ -74,6 +75,11 @@ export const ProductFormUI = ({
         <div>
           <label>Imagen:</label>
           <input type="file" accept="image/*" onChange={onFileChange} />
+          {product.image && inEdition && (
+            <p className="image-note">
+              Subí otra foto si querés reemplazar la que está cargada
+            </p>
+          )}
           {errors.file && <p className="error">{errors.file}</p>}
         </div>
 
@@ -82,7 +88,11 @@ export const ProductFormUI = ({
           type="submit"
           disabled={loading}
         >
-          {loading ? "Guardando..." : "Guardar"}
+          {loading
+            ? "Guardando..."
+            : inEdition
+              ? "Actualizar Producto"
+              : "Guardar"}
         </button>
 
         {/* Para errores generales que no sean la validación del form */}
