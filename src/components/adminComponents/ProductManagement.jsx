@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { getProducts, deleteProduct } from "../../services/productsService";
 import "./ProductManagement.css";
 import { ProductManagementCards } from "./ProductManagementCards";
-import { AiFillFileAdd } from "react-icons/ai";
 
 export const ProductManagement = () => {
   const [products, setProducts] = useState([]);
@@ -36,10 +34,6 @@ export const ProductManagement = () => {
       alert("No se pudo eliminar el producto. Intentalo de nuevo.");
     }
   };
-
-  /* ----------------------- MODIFICAR PRODUCTOS POR ID ----------------------- */
-
-  const HandleUpdate = async (id) => {};
 
   if (loading) return <p>cargando..</p>;
   if (errors) return <p>Error al cargar productos: {errors}</p>;

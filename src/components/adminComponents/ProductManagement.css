@@ -1,0 +1,30 @@
+.contenedor-tarjetas-principal .manage-card {
+  padding: 2rem;
+  height: 30rem;
+}
+
+.product-actions {
+  display: flex;
+  gap: 5rem; /* Espacio entre el lápiz y el cesto*/
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+/* Estilo y tamaño para el botón del lápiz */
+.btn-edit {
+  font-size: 2.2rem; /* Cambia el tamaño del emoji/icono */
+  padding: 0.6rem 0.1rem;
+  /* background-color: ... si querés darle fondo */
+  text-decoration: none;
+  border-radius: 0.4rem;
+}
+
+/* Estilo y tamaño para el botón de borrar */
+.btn-delete {
+  font-size: 2.2rem; /* Cambia el tamaño del emoji/icono */
+  padding: 0.6rem 0.1rem;
+  cursor: pointer;
+  border: none;
+  background: rgba(219, 217, 217, 0.588);
+  border-radius: 0.2rem;
+}
