@@ -31,7 +31,7 @@ export const Dashboard = () => {
             Cerrar sesión
           </button>
 
-          <Link
+          {/* <Link
             to="/admin/dashboard/meme"
             className="btn bg-secondary text-dark meme"
           >
@@ -41,7 +41,7 @@ export const Dashboard = () => {
               alt="meme"
             />
             Para ver un meme
-          </Link>
+          </Link> */}
         </div>
 
         <div className="secondary">

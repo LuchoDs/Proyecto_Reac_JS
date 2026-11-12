@@ -56,7 +56,7 @@ function App() {
               element={<ProductFormConteiner />}
             />
             <Route path="products/success/:id" element={<ProductSuccess />} />
-            <Route path="meme" element={<Meme />} />
+            {/* <Route path="meme" element={<Meme />} /> */}
           </Route>
         </Route>
       </Routes>
