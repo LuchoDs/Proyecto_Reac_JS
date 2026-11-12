@@ -7,7 +7,7 @@ export const CartList = () => {
   return (
     <div className="contenedor-tarjetas">
       {cart.map((element) => (
-        <CartItem item={element} key={element.id} />
+        <CartItem item={element} key={element.id} /> //key va siempre en la estructura padre, o sea, la que envuelve todo
       ))}
     </div>
   );

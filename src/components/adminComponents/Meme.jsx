@@ -1,3 +1,4 @@
+import { AiFillSafetyCertificate } from "react-icons/ai";
 import "./Meme.css";
 
 export const Meme = () => {

@@ -1,31 +1,14 @@
 import { useEffect, useState } from "react";
-import { db } from "../../firebase/config";
-import { collection, getDocs } from "firebase/firestore";
 import { OrdersManagementCards } from "./OrdersManagementCards";
 import { Link } from "react-router-dom";
+import { getOrders } from "../../services/ordersService";
 
 export const OrdersManagement = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errors, setErrors] = useState(null);
 
-  /* --------------------------- CREACION LINK A LA BASE --------------------------- */
-  const orderRef = collection(db, "orders");
-  const getOrders = async () => {
-    try {
-      const snapshot = await getDocs(orderRef);
-
-      const orderFormat = snapshot.docs.map((doc) => {
-        return { id: doc.id, ...doc.data() };
-      });
-      return orderFormat;
-    } catch (error) {
-      console.log("Error al traer productos", error);
-      throw error;
-    }
-  };
-
-  /* --------------------- CONEXION PARA TRAER LAS ORDENES -------------------- */
+  /* --------------------- CONEXION PARA MOSTRAR LAS ORDENES -------------------- */
   useEffect(() => {
     getOrders()
       .then((data) => setOrders(data))

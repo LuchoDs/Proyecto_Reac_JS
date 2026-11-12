@@ -44,7 +44,8 @@ export const ProductFormConteiner = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProduct({ ...product, [name]: value });
-    //esto me trae lo que tenia "...product", y le agrega la nueva clave, [name] y value son del label. Y asi armar el objeto completo- nombre, precio, etc etc..
+    //esto me trae lo que tenia "...product", y le agrega la nueva clave, [name] y value son del label.
+    // Y asi armar el objeto completo- nombre, precio, etc etc..
   };
 
   const handleFileChange = (e) => {

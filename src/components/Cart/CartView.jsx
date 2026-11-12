@@ -10,7 +10,7 @@ export const CartView = () => {
   return (
     <section className="cart-container">
       <h3 className="titulo-principal text-dark">Tu carrito de compras</h3>
-
+      {/* Para agregar lógica en el return debo agregar llaves {} */}
       {cart.length ? (
         <>
           {/* // Fragments <></> me permite renderizar mas de una cosa */}
